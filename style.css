@@ -1,0 +1,225 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Maven Pro", sans-serif;
+}
+.main-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-container {
+  width: 28rem;
+  height: 38rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+}
+.music-container #title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #171717;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.music-container #artist {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  color: #cccaca;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.image-container {
+  width: 25rem;
+  height: 25rem;
+  margin: auto;
+}
+.image-container img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+.music-controls {
+  width: 20rem;
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.music-controls i {
+  color: #111;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+  transition: all 0.2s linear;
+}
+.music-controls i:hover {
+  color: gray;
+}
+.music-controls .fa-play,
+.music-controls .fa-pause {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #111;
+  color: #f6f6f6;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+.music-controls .fa-play:hover,
+.music-controls .fa-pause:hover {
+  background-color: #f6f6f6;
+  color: #111;
+  box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+/* routing animation */
+.anime {
+  animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* progressbar sytle */
+
+.progressbar-container {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+.progress-div {
+  width: 100%;
+  height: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    /* transition: width 1s linear;
+    -o-transition:  width 1s linear;
+    -moz-transition:  width 1s linear;
+    -webkit-transition:  width 1s linear; */
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.progress{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(0, 166, 255);
+  border-radius: 4rem;
+  /* transition: width 1s linear;
+  -o-transition:  width 1s linear;
+  -moz-transition:  width 1s linear;
+  -webkit-transition:  width 1s linear; */
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.progress-duration-meter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+
+/* animation */
+
+
+span {
+  background: #2c2c2c;
+  width: 6px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 40px;
+}
+.water-wave span {
+  background: #2c2c2c;
+  width: 6px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 40px;
+  transform-origin: bottom;
+  animation: wave 1s linear infinite;
+
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  height: 80px;
+}
+
+@keyframes wave {
+0%{
+  transform: scale(0);
+}
+50%{
+  transform: scale(1);
+}
+
+100%{
+  transform: scale(0);
+}
+}
+
+.water-wave span:nth-child(2){
+animation-delay: 0.1s;
+}
+.water-wave span:nth-child(3){
+animation-delay: 0.2s;
+}
+.water-wave span:nth-child(4){
+animation-delay: 0.3s;
+}
+.water-wave span:nth-child(5){
+animation-delay: 0.4s;
+}
+.water-wave span:nth-child(6){
+animation-delay: 0.5s;
+}
+.water-wave span:nth-child(7){
+animation-delay: 0.6s;
+}
+.water-wave span:nth-child(8){
+animation-delay: 0.7s;
+}
+.water-wave span:nth-child(9){
+animation-delay: 0.8s;
+}
+.water-wave span:nth-child(10){
+animation-delay: 0.9s;
+}

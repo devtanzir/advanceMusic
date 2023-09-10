@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>🎀 Music App</title>
+  </head>
+  <body>
+
+
+    <div class="main-div">
+      <div class="music-container">
+        <h2 id="title">LOTUS LANE</h2>
+        <h3 id="artist">The Loyalist</h3>
+        <div class="box" id="water-wave">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <audio id="adio" src="media/m1.mp3"></audio>
+
+        <!-- progress bar -->
+
+        <div class="progressbar-container" id="progress-container">
+          <div class="progress-duration-meter">
+            <div id="current-time">0:0</div>
+            <div id="duration">5:24</div>
+          </div>
+          <div class="progress-div" id="progress-div">
+            <div class="progress" id="progress">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <div class="music-controls">
+          <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+          <i class="fa-solid fa-play" id="Play" title="Play"></i>
+          <i class="fa-solid fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+    </div>
+    <div class="try">
+
+    </div>
+    <script src="./app.js"></script>
+
+  </body>
+</html>
